@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git vizualizer</title>
+    <link rel="icon" type="image/x-icon" href="./icons8-git.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+<nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Git vizualizer</span>
+      </a>
+      <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reset</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<main>
+    <section class="flex flex-row justify-around items-stretch h-[22rem] mt-4 overflow-y-scroll">
+        <div id="working-directory" class=" bg-gray-200 p-4 flex flex-col gap-4">
+            <div class="bg-gray-600 text-white p-2 rounded-lg">Working <br class="sm:hidden">Directory</div>
+    
+        </div>
+        <div id="staging-area" class=" bg-gray-200 p-4 flex flex-col gap-4 hidden">
+            <div class="bg-gray-600 text-white p-2 rounded-lg">Staging <br class="sm:hidden">Area</div>
+
+        </div>
+        <div id="local-repocontainer" class=" bg-gray-200 p-4 flex flex-col gap-4 hidden"><div class="bg-gray-600 text-white p-2 rounded-lg">Local <br class="sm:hidden">Repository</div>
+    <div id="local-repo" class=" bg-gray-200 p-4 flex flex-col gap-4">
+
+    </div>
+    </section>
+</main>
+
+<div class="w-full absolute z-10 bottom-0">
+    <div class="h-fit coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased 
+                bg-gray-800  pb-6 pt-4 leading-normal overflow-hidden">
+        <div class="top mb-2 flex">
+            <div class="h-3 w-3 bg-red-500 rounded-full"></div>
+            <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
+            <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+        </div>
+        <div class="mt-4 flex">
+            
+            <div class="relative w-full">
+                <div class="inset-y-0 left-0 flex items-center pl-3 pointer-events-none max-h-40 overflow-y-scroll">
+                    <!-- <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
+                    </svg> -->
+                    <span id="terminal-command" class="text-green-400 p-2">
+                        <div >computer:~$ you can vizualise git by typing command here,<br>Don't know what to do lets start with creating file 'touch index.html'</div>
+                    </span>
+                </div>
+                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " required>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+</body>
+<script src="./script.js"></script>
+</html>
