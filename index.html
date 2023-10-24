@@ -55,19 +55,16 @@
             <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
             <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
         </div>
-        <div class="mt-4 flex">
+        <div class="mt-4 flex flex-col">
             
-            <div class="relative w-full">
-                <div class="inset-y-0 left-0 flex items-center pl-3 pointer-events-none max-h-40 overflow-y-scroll">
-                    <!-- <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
-                    </svg> -->
-                    <span id="terminal-command" class="text-green-400 p-2">
+            <div class="relative w-full max-h-40 overflow-auto">
+                <div class="inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <span id="terminal-command" class="text-green-400 p-2 relative botton-0 ">
                         <div >computer:~$ you can vizualise git by typing command here,<br>Don't know what to do lets start with creating file 'touch index.html'</div>
                     </span>
                 </div>
-                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " required>
             </div>
+            <input type="text" id="simple-search" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " required>
         </div>
     </div>
   </div>
